@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+:root {
+  --very-dark-gray: hsl(0, 0%, 17%);
+  --dark-gray: hsl(0, 0%, 59%);
+  --white: #fff;
+  --black: #000;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px;
+  visibility: hidden;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  width: 100%;
+  height: 350px;
+  background-image: url('../images/pattern-bg.png');
+  padding: 1.9rem;
+  position: relative;
+}
+
+.main-heading {
+  color: var(--white);
+  text-align: center;
+  margin-bottom: 1.9rem;
+}
+
+.form {
+  max-width: 500px;
+  margin: 0 auto;
+  height: 3.75rem;
+  border-radius:  .6rem;
+  display: flex;
+}
+
+.form__input {
+  font-size: 1rem;
+  font-family: inherit;
+  height: inherit;
+  border: none;
+  border-top-left-radius: inherit;
+  border-bottom-left-radius: inherit;
+  outline: 0;
+  flex: 1;
+  padding: 0 1.9rem;
+}
+
+.form__input::placeholder {
+  color: var(--dark-gray);
+  font-weight: 700;
+}
+
+.form__submit {
+  display: block;
+  width: 4.375rem;
+  background-color: var(--black);
+  border: none;
+  border-top-right-radius: inherit;
+  border-bottom-right-radius: inherit;
+}
+
+.main {
+  flex: 1;
+}
+
+.search-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  text-align: center;
+  padding: 1.9rem;
+  background-color: var(--white);
+  position: absolute;
+  left: 1.9rem;
+  right: 1.9rem;
+  transform: translateY(-50%);
+  z-index: 9999;
+  border-radius: .6rem;
+  box-shadow: 0 0 2.5rem #d5d5d58f;
+}
+
+.search-info__heading {
+  text-transform: uppercase;
+  margin-bottom: .5rem;
+  color: var(--dark-gray);
+}
+
+.search-info__value {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--very-dark-gray);
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 769px) {
+  .search-info {
+    flex-direction: row;
+    text-align: left;
+  }
+  
+  .search-info__group {
+    flex: 1;
+  }
+  
+  .search-info__group:not(:last-child) {
+    border-right: 1px solid var(--dark-gray);
+  }
+  
+  .search-info__value {
+    font-size: 1.5rem;
+  }
+}

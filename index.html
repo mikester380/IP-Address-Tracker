@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | IP Address Tracker</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin="" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" defer></script>
+  <script src="scripts/script.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 class="main-heading">IP Address Tracker</h1>
+
+      <form class="form">
+        <input type="text" class="form__input" placeholder="Search for any IP Address or domain">
+        <button type="submit" class="form__submit">
+          <img src="images/icon-arrow.svg" alt="">
+        </button>
+      </form>
+    </header>
+    <main class="main">
+      <section class="search-info">
+        <div class="search-info__group">
+          <h6 class="search-info__heading">
+            ip address
+          </h6>
+          <p class="search-info__ip search-info__value">
+            -
+          </p>
+        </div>
+        <div class="search-info__group">
+          <h6 class="search-info__heading">
+            location
+          </h6>
+          <p class="search-info__location search-info__value">
+            -
+          </p>
+        </div>
+        <div class="search-info__group">
+          <h6 class="search-info__heading">
+            timezone
+          </h6>
+          <p class="search-info__timezone search-info__value">
+            -
+          </p>
+        </div>
+        <div class="search-info__group">
+          <h6 class="search-info__heading">
+            isp
+          </h6>
+          <p class="search-info__isp search-info__value">
+            -
+          </p>
+        </div>
+      </section>
+      <div id="map"></div>
+    </main>
+  </div>
+</div>
+</body>
+</html>
